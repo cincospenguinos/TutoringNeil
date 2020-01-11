@@ -7,5 +7,20 @@ package project_euler;
  */
 public class Problem1 {
 
-    public static void main(String[] args) {}
+    public static void main(String[] args) {
+        int[] numbers = new int[1000];
+
+        for (int i = 0; i < 1000; i++) {
+            if (i % 3 == 0 || i % 5 == 0) {
+                numbers[i] = i;
+            }
+        }
+
+        int sum = 0;
+        for (int index = 0; index < numbers.length; index++) {
+            sum += numbers[index];
+        }
+
+        System.out.println(sum);
+    }
 }
